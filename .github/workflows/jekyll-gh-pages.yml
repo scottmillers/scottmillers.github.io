@@ -46,8 +46,8 @@ jobs:
           echo "Directory contents: $(ls)"
           # Run your command here
           bundle install --jobs 4 --retry 3
-          bundle exec jekyll build
-          
+          JEKYLL_ENV=production bundle exec jekyll b
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
    
